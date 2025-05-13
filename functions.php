@@ -15,6 +15,8 @@ function custom_theme_setup() {
 }
 add_action('after_setup_theme', 'custom_theme_setup');
 
+add_theme_support('custom-logo');
+
 class Bootstrap_Nav_Pills_Walker extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth = 0, $args = null) {}
     function end_lvl(&$output, $depth = 0, $args = null) {}

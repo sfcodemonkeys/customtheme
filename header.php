@@ -9,7 +9,15 @@
 <body <?php body_class(); ?>>
     <header class="bg-dark text-white p-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="site-title mb-0"><?php bloginfo('name'); ?></h1>
+        <a class="navbar-brand fw-bold" href="<?php echo esc_url(home_url('/')); ?>">
+            <?php
+            if (has_custom_logo()) {
+                the_custom_logo(); 
+            } else {
+                bloginfo('name'); 
+            }
+            ?>
+        </a>
             <nav class="navbar navbar-expand-lg navbar-light py-3">
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
